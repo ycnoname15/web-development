@@ -1,0 +1,830 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+*{
+font-family: 'Josefin Sans', sans-serif;
+margin: 0;
+padding: 0;
+scroll-padding-top: 1rem;
+scroll-behavior: smooth;
+list-style: none;
+text-decoration: none;
+box-sizing: border-box;
+}
+
+
+body {
+    background-color: white;
+}
+  
+
+/* Header Configuration */
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 8%;
+    background: transparent;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+/* ------------------------------------------------------- */
+
+
+/* Logo Configuration */
+.logo{
+    font-size: 35px;
+    color: black;
+    text-decoration: none; 
+    font-weight: 600;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+/* ------------------------------------------------------- */
+
+
+/* Navbar Configuration */
+
+
+
+.navbar .logo {
+    background-color: aqua;
+ 
+}
+
+
+
+
+.navbar a {
+    font-size: 18px;
+    color: black;
+    text-decoration: none; 
+    font-weight: 500;
+    margin: 0 20px;
+    transition: .3s;
+    opacity: 0; 
+    animation: slideTop 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+
+/* Pointer Point At Navbar change color */
+.navbar a:hover,
+.navbar.a.active{
+color: navy;
+}
+
+
+/* ------------------------------------------------------- */
+
+
+
+/* Account Button */
+.accountbtn{
+    display: inline-block;
+    padding: 10px 20px;
+    background: navy;
+    border: 2px solid navy;
+    border-radius: 30px;
+    box-shadow: 0, 0, 10px;
+    font-size: 16px;
+    color: lightcyan;
+    margin-left: -120px;
+    margin-top: -1px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .5s;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+/* Account Button Hover */
+.accountbtn:hover{
+    background: transparent;
+    color: navy;
+}
+
+
+/* ------------------------------------------------------- */
+
+
+
+/* Social Media logo */
+.social-media a i{
+    font-size: 29px;
+    color: black;
+    rotate: 45deg;
+    animation: slideRight 2s ease forwards;
+}
+
+
+/* Space between Social-Media */
+.social-media{
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    height: 40px;
+}
+
+
+/* Social Media square box */
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent; 
+    border: 2px solid transparent;
+    text-decoration: none;
+    transform: rotate(-45deg);
+    transition: .5s;
+}
+
+
+/* Social-Media Hover */
+.social-media a:hover{
+    border-color: navy;
+}
+
+
+/* ------------------------------------------------------- */
+
+
+
+/* Home Display Text */
+.displaytext{
+    width: 100%;
+    height: 100vh;
+    display:flex;
+    align-items: center;
+    padding:50px 8% 0;
+}
+
+.display-content h1{
+    max-width: 500px;
+    font-size: 40px;
+    line-height: 1.2;
+    opacity: 0;
+    animation: slideRight 1.8s ease forwards;
+}
+
+.display-content h2{
+    max-width: 500px;
+    font-size: 40px;
+    line-height: 1.2;
+    opacity: 0;
+    animation: slideRight 2s ease forwards; 
+}
+
+.display-content h3{
+    max-width: 400px;
+    font-size: 25px;
+    color: navy;
+    line-height: 1.0;
+    margin: 15px 0 30px;
+    opacity: 0;
+    animation: slideRight 2.2s ease forwards; 
+
+}
+
+
+
+/* ------------------------------------------------------- */
+
+
+
+/* Discover Now Button */
+.discoverbtn{
+    display: inline-block;
+    padding: 10px 28px;
+    background: navy;
+    border: 2px solid navy;
+    border-radius: 6px;
+    box-shadow: 0, 0, 10px;
+    font-size: 16px;
+    color: lightcyan;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .5s;
+    opacity: 0;
+    animation: slideRight 2.7s ease forwards; 
+}
+
+
+/* Discover Now Button Hover */
+.discoverbtn:hover{
+    background: transparent;
+    color: navy;
+}
+
+
+/* Car Image */
+.home-img img{
+    position:absolute;
+    max-width: 870px;
+    top: 190px;
+    left: 550px;
+    animation: home-img 1s ease forwards;        /*   car moving animation   */
+}
+
+
+/* ------------------------------------------------------- */
+
+
+
+
+/* Slide Right KeyFrame Animation */
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+/* SlideTop KeyFrame Animation */
+@keyframes slideTop{
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+/* Car Animation */
+@keyframes home-img{
+    0%{
+        transform: translate(300px, -300px) scale(0) rotate(-45deg);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translate(0px, 0px) scale(1) rotate(0);
+        opacity: 1;
+    }
+}
+
+
+
+/* ------------------------------------------------------- */
+
+
+
+/* Align 2nd Page Text Heading */
+.heading{
+    text-align: center;
+    margin-top: 11px;
+    line-height: 1.2;
+}
+
+/* 2nd Page Text */
+.heading span{
+    font-weight: 500;
+    font-size: 30px;
+    color: black;
+}
+
+.heading h2{
+    color: navy;
+    font-weight: 500;
+    font-size: 28px;
+}
+
+
+
+/* ------------------------------------------------------- */
+
+
+
+/* Cars Container */
+.cars-container{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 70px;
+}
+
+
+/* Arrange Cars Logo Size */
+.cars-container .box img{
+    height: 140px;
+    margin-left: 5px;
+}
+
+
+/* Pointer Point Car Logo Zoom In */
+.cars-container .box img:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+
+/* Align Car Brands Text */
+.cars-container h2{
+    text-align: center;
+}
+
+
+/* ------------------------------------------------------- */
+
+
+
+
+/* BuyCar.HTML */
+
+/* Yconcept Logo Configuration */
+.yconceptLogo{
+    height: 200px;
+    max-width: 200px;
+    margin: 30px;
+    padding: 13px;
+    margin-left: 240px;
+    animation: slideTop 2s ease forwards; 
+}
+
+
+
+/* Browse YConcept Configure Text */
+.display-content3 {
+text-align: center;
+font-weight: 100;
+font-size: 30px;
+margin-top: -200px;
+margin-left: 165px;
+color: red;
+opacity: 0;
+animation: slideTop 2.5s ease forwards;
+}
+
+
+
+/*  ( Request, Inspect, payment ) Position Configuration */
+
+
+/*  Animation */
+.procedure{
+    opacity: 0;
+    animation: slideTop 2.5s ease forwards;
+}
+
+/*  Request image */
+.request {
+    margin-left: 300px;
+    margin-top: 20px;
+}
+
+/*  inspect image */
+.inspect {
+    margin-left: 650px;
+    margin-top: 18px;;
+}
+
+/*  payment image */
+.payment {
+    margin-left: 1030px;
+    margin-top: 19px;
+}
+
+
+/*  Configure words Above the image */
+.procedure p {
+    margin-top: 14px;
+    margin-left: -60px;
+}
+
+/*  Scedule A Mobile Inspection word Position */
+.procedure span{
+    margin-left: 300px;
+    font-size: 20px;
+}
+
+/*  Sell your car Word Position */
+.procedure li{
+    margin-top: -160px;
+    margin-left: 675px;
+    font-size: 20px;
+}
+
+/* 100% Secure payment Word Position */
+.procedure ul{
+    margin-left: 1020px;
+    margin-top: -155px;
+    font-size: 20px;
+}
+
+
+
+
+/* ------------------------------------------------------- */
+
+
+
+/* Account.HTML */
+
+body{
+    min-height: 100vh;
+    width: 100%;
+    background: white;
+  }
+
+  /* Log In & Sign-Up Container */
+  .container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 430px;
+    width: 100%;
+    background: white;
+    border-radius: 7px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+  }
+
+
+  .container .registration{
+    display: none;
+  }
+
+  #check:checked ~.registration{
+    display: block;
+  }
+
+  #check:checked ~.login{
+    display: none;
+  }
+
+  #check{
+    display: none;
+  }
+
+
+  /* Container Padding */
+  .container .form{
+    padding: 2rem;
+  }
+
+
+
+  /* Log In Word Configuration */
+  .form header{
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+
+  /* Information In Container Configuration */
+  .form input{
+    height: 60px;
+    width: 100%;
+    padding: 0 15px;
+    font-size: 17px;
+    margin-bottom: 1.3rem;
+    border: 1px solid white;
+    border-radius: 6px;
+    outline: none;
+  }
+
+   .form input:focus{
+    box-shadow: 0 1px 0 rgba(0,0,0,0.2);
+  }
+
+
+
+  /* Forgot PassWord Text Configuration */
+  .form a{
+    font-size: 16px;
+    color: navy;
+    text-decoration: none;
+  }
+
+
+ /* Forgot PassWord Hover */
+  .form a:hover{
+    text-decoration: underline;
+  }
+
+
+   /* Log In Button */
+  .form input.button{
+    color: white;
+    background: navy;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-top: 1.7rem;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+
+  /* Log In Button Hover */
+  .form input.button:hover{
+    background: navy;
+  }
+  
+
+  /* Sign Up Word Configuration */
+  .signup{
+    font-size: 17px;
+    text-align: center;
+  }
+
+
+  /* Sign Up Word From Cursor To Pointer */
+  .signup label{
+    color: navy;
+    cursor: pointer;
+  }
+
+
+  /* Sign Up Word Hover */
+  .signup label:hover{
+    text-decoration: underline;
+  }
+
+
+
+  /* Background Picture Behind Login & Sign-Up Page Configuration */
+.backgroundpic{
+    width: 100%;
+    min-height: 100vh;
+    padding: 5%;
+    background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(/Users/yc/Downloads/erik-mclean-ZRns2R5azu0-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+/* ------------------------------------------------------- */
+
+
+
+
+/*  Sell Car HTML */
+/* Sell Car Configure Text */
+.sellcarText {
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    font-size: 27px;
+    color: navy;
+    opacity: 0;
+    animation: slideRight 1.5s ease forwards;
+}
+
+.sellcarText span{
+    color: red;
+    font-size: 60px;
+}
+
+.sellcarText h2 {
+   padding: 20px;
+   font-size: 22px;
+   opacity: 0;
+   animation: slideRight 1.9s ease forwards;
+}
+
+
+
+
+    
+
+/* ------------------------------------------------------- */
+
+
+
+
+/* YConcept Certified Display Text */
+.certified-content{
+    max-width: 630px;
+}
+
+
+.certified{
+    width: 100%;
+    height: 100vh;
+    display:flex;
+    align-items: center;
+    padding:50px 8% 0;
+}
+
+.certified-content h1{
+    color: navy;
+    max-width: 500px;
+    font-size: 40px;
+    line-height: 1.2;
+    opacity: 0;
+    animation: slideRight 1.8s ease forwards;
+}
+
+.certified-content h2{
+    max-width: 500px;
+    font-size: 40px;
+    line-height: 1.2;
+    opacity: 0;
+    animation: slideRight 2s ease forwards; 
+}
+
+.certified-content h3{
+    max-width: 500px;
+    font-size: 35px;
+    line-height: .5;
+    margin: 15px 0 30px;
+    opacity: 0;
+    animation: slideRight 2.2s ease forwards; 
+
+}
+
+.certified-content p{
+    max-width: 450px;
+    font-size: 18px;
+    margin: 15px 0 30px;
+    margin-top: -12px;
+    opacity: 0;
+    animation: slideRight 2.5s ease forwards; 
+  
+}
+
+
+
+/* Certified image configuration */
+.certified-img{
+    size: 200px;
+    margin-left: 111px;
+    margin-top: -240px;
+}
+
+
+
+
+
+
+
+/* ------------------------------------------------------- */
+
+
+
+
+
+
+
+/* What Our Clients Say Display Text */
+.verified-content{
+    margin: 400px;
+    text-align: center;
+    max-width: 630px;
+}
+
+
+.verified{
+    width: 100%;
+    height: 70vh;
+    display:flex;
+    align-items: center;
+    padding:50px 8% 0;
+}
+
+
+.verified h1{
+    max-width: 500px;
+    font-size: 40px;
+    line-height: 1.2;
+    opacity: 0;
+    animation: slideRight 1.8s ease forwards;
+}
+
+
+.verified h2{
+    max-width: 500px;
+    font-size: 40px;
+    line-height: 1.2;
+    opacity: 0;
+    animation: slideRight 2s ease forwards; 
+}
+
+
+
+
+/* Position Configuration Of Customer Review in a box */
+.testimonial-box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: -120px;
+}
+
+
+
+/* Customer Review in a box */
+.testimonial-box {
+    width: 500px;
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+    background-color: aliceblue;
+    padding: 20px;
+    margin: 15px;
+    cursor: pointer;
+}
+
+
+/* Configure Profile image */
+.profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+
+/* Position Of Name Display */
+.profile {
+    display: flex;
+    align-items: center;
+
+}
+
+/* Position Of User-Name Display */
+.name-user {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Name Display Strong */
+.name-user strong{
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+/*  User-Name Configuration */
+.name-user span {
+    color: burlywood;
+    font-size: 0.8rem;
+}
+
+
+/*  Review Stars Color */
+.reviews {
+    color: #f9d71c;
+}
+
+
+.box-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+/*  Client comments configuration */
+.client-comment p {
+    color: #4b4b4b;
+    font-size: 0.9rem;
+    line-height: 19px;
+    font-display: justify;
+}
+
+
+/*  Client comments hover */
+.testimonial-box:hover {
+    transform: translateY(-10px);
+    transition: all ease x.3s;
+}
