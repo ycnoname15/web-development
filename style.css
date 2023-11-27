@@ -19,12 +19,11 @@ body {
 
 /* Header Configuration */
 .header{
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 30px 8%;
     background: transparent;
+    padding: 30px 8%;
     display:flex;
     justify-content: space-between;
     align-items: center;
@@ -49,13 +48,10 @@ body {
 
 /* Navbar Configuration */
 
-
-
 .navbar .logo {
     background-color: aqua;
  
 }
-
 
 
 
@@ -163,7 +159,8 @@ color: navy;
     height: 100vh;
     display:flex;
     align-items: center;
-    padding:50px 8% 0;
+    padding:150px ;
+    margin-top: -60px;
 }
 
 .display-content h1{
@@ -313,21 +310,28 @@ color: navy;
 
 /* ------------------------------------------------------- */
 
+.big-container{
+    max-width: 1280px;
+}
 
 
 /* Cars Container */
 .cars-container{
     display:flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 2rem;
     margin-top: 70px;
+    margin-left: 120px;
 }
 
 
 /* Arrange Cars Logo Size */
 .cars-container .box img{
     height: 140px;
+    background-color:rgb(2, 2, 23);
     margin-left: 5px;
+    border-radius: 30px;
 }
 
 
@@ -340,6 +344,7 @@ color: navy;
 
 /* Align Car Brands Text */
 .cars-container h2{
+    padding: 10px;
     text-align: center;
 }
 
@@ -351,15 +356,9 @@ color: navy;
 
 /* BuyCar.HTML */
 
-/* Yconcept Logo Configuration */
-.yconceptLogo{
-    height: 200px;
-    max-width: 200px;
-    margin: 30px;
-    padding: 13px;
-    margin-left: 240px;
-    animation: slideTop 2s ease forwards; 
-}
+
+
+
 
 
 
@@ -430,6 +429,7 @@ animation: slideTop 2.5s ease forwards;
     margin-top: -155px;
     font-size: 20px;
 }
+
 
 
 
@@ -623,6 +623,7 @@ body{
 /* YConcept Certified Display Text */
 .certified-content{
     max-width: 630px;
+    margin-top: -50px;
 }
 
 
@@ -828,3 +829,288 @@ body{
     transform: translateY(-10px);
     transition: all ease x.3s;
 }
+
+
+/* ------------------------------------------------------- */
+
+
+
+
+
+
+
+
+  /* arrivals  */
+  .arrivals{
+    text-align: center;
+    padding-top: 7rem;
+}
+
+.arrivals h5{
+    font-size: large;
+    margin-top: 20px;
+}
+
+.arrivals h4{
+    color: var(--main-color);
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding-bottom: 1.5rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 2px;
+}
+
+.arrivals h4 i{
+    padding-right: 0.5rem;
+}
+
+.arrivals h1{
+    padding-bottom: 4rem;
+    font-size: 2rem;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+.arrivals h1 span{
+    color: red;
+}
+
+.arrivals .arr-row{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:2.5rem;
+}
+
+.arr-row .arr-col{
+    padding: 1rem;
+    box-shadow: 0 0 5px gray;
+    background-color: aliceblue;
+    border-radius: 10px;
+    text-align: justify;
+}
+
+.arr-row .arr-col .image{
+    width: 100%;
+    height: 15rem;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: 0.5s ease;
+}
+
+.arr-row .arr-col .image img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+    transition: 0.5s ease;
+}
+
+.arr-row{
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+
+
+.arr-col .rating .stars i{
+    color:red;
+    font-size: 1.4rem;
+}
+
+.arr-col span{
+    font-size: 1rem;
+    font-weight: 300;
+    color: #646161;
+}
+
+
+.arr-col .features{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-top: 18px;
+}
+
+.arr-col .features span{
+    color: #646161;
+}
+
+.arr-col .features span i{
+    color: red;
+    padding-right: 0.3rem;
+}
+
+
+.arr-col p{
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.arr-col .price{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.arr-col button{
+    background: red;
+    padding: 0.8rem 1.8rem;
+    color: black;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.arr-col button:hover{
+    background: var(--main-color);
+}
+
+
+
+
+/* footer */
+
+.footer{
+    background: rgb(2, 2, 23);
+}
+
+.footer .footer-row{
+    padding: 2rem 16rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+.footer-col img{
+    margin-bottom: 26px;
+}
+
+.footer-col p{
+    color: aliceblue;
+    font-size: 1.1rem;
+    padding-bottom: 2.5rem;
+}
+
+.footer-col span{
+    display: block;
+    color: aliceblue;
+    font-size: 1rem;
+    padding-bottom: 1rem;
+}
+
+.footer-col span i{
+    background: red;
+    padding: 0.2rem;
+    border-radius: 10px;
+    margin-right: 5px;
+    font-size: 13px;
+}
+
+.footer-col h5{
+    color: aliceblue;
+    font-size: 1.4rem;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.footer-col h5::before{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    border-radius: 3px;
+    background: aliceblue;
+    bottom: 0;
+}
+
+.footer-col h5::after{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    border-radius: 3px;
+    background: red;
+    bottom: 0;
+    left: 40px;
+}
+
+.footer-col a{
+    display: block;
+    color: aliceblue;
+    font-size: 1rem;
+    padding-top: 1rem;
+    transition: 0.4s ease;
+}
+
+.footer-col a:hover{
+    padding-left: 5px;
+    color: red;
+}
+
+
+.footer-col input{
+    width:100%;
+    height: 40px;
+    font-size: 1.1rem;
+    padding-left: 10px;
+    color: black;
+    margin-bottom: 1.5rem;
+}
+
+.footer-col button{
+    background: red;
+    padding: 1rem 2rem;
+    font-size: 0.8rem;
+    color: aliceblue;
+    transition: 0.4s ease;
+}
+
+.footer-col button:hover{
+    background: black;
+    border: 2px solid white;
+}
+
+
+
+
+.footer .footer-bottom p{
+    color: aliceblue;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-left: -220px;
+}
+
+.footer .footer-bottom span{
+    color: red;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+.privacy .privacy-content h1{
+    font-size: 20px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+
+.privacy .privacy-content span{
+    color: red;
+    font-size: 30px;
+}
+
+
+

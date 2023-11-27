@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .slider-container {
+      width: 700px; /* Set the width of your slider */
+      overflow: hidden;
+      margin: 20px auto; /* Center the slider on the page */
+    }
+
+    .slider {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+      min-width: 100%;
+      box-sizing: border-box;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 24px;
+      cursor: pointer;
+      padding: 10px;
+      background-color: #333;
+      color: white;
+      border: none;
+    }
+
+    .prev { left: 0; }
+    .next { right: 0; }
+  </style>
+</head>
+
+
+<body>
+
+<div class="slider-container">
+  <div class="slider">
+    <div class="slide"><img src="/Users/yeuchen/Documents/Images/honda/h1.png" alt="Slide 1"></div>
+    <div class="slide"><img src="/Users/yeuchen/Documents/Images/honda/h2.png" alt="Slide 1"></div>
+    <div class="slide"><img src="/Users/yeuchen/Documents/Images/honda/h3.png" alt="Slide 1"></div>
+    <div class="slide"><img src="/Users/yeuchen/Documents/Images/honda/h4.png" alt="Slide 1"></div>
+    <div class="slide"><img src="/Users/yeuchen/Documents/Images/honda/h5.png" alt="Slide 1"></div>
+    <div class="slide"><img src="/Users/yeuchen/Documents/Images/honda/h6.png" alt="Slide 1"></div>
+    <div class="slide"><img src="/Users/yeuchen/Documents/Images/honda/h7.png" alt="Slide 1"></div>
+  </div>
+</div>
+
+<button class="prev" onclick="prevSlide()">❮</button>
+<button class="next" onclick="nextSlide()">❯</button>
+
+<script>
+  let currentIndex = 0;
+
+  function showSlide(index) {
+    const slider = document.querySelector('.slider');
+    const slides = document.querySelectorAll('.slide');
+
+    if (index >= slides.length) {
+      currentIndex = 0;
+    } else if (index < 0) {
+      currentIndex = slides.length - 1;
+    } else {
+      currentIndex = index;
+    }
+
+    const offset = -currentIndex * 100 + '%';
+    slider.style.transform = 'translateX(' + offset + ')';
+  }
+
+  function prevSlide() {
+    showSlide(currentIndex - 1);
+  }
+
+  function nextSlide() {
+    showSlide(currentIndex + 1);
+  }
+</script>
+
+</body>
+
+
+
+<section class="mecerdes">
+  <div class="m-content">
+      <h1> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2018 Mitsubishi Outlander 1.5 FOR SALE </h1>
+      <h2> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get Your DreamCar In Minutes</h2>
+      <h3> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Direct Owner contact : 012-7723566</h3>
+  </div>
+
+  <div class="m-img">
+    <img src="/Users/yeuchen/Documents/IMG_2113-4.jpg" alt="" style="max-width: 30%;">
+</div>
+</section>
+
+
+
+</html>
